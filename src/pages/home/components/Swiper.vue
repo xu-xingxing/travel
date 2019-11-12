@@ -2,11 +2,11 @@
     <div>
         <div class="wraper">
             <swiper :options="swiperOption" ref="mySwiper">
-            <swiper-slide v-for="item of swiperList" :key="item.id">
-                <img class="swiper-image" :src="item.imgUrl" alt="">
-            </swiper-slide>
+                <swiper-slide v-for="item of swiperList" :key="item.id">
+                    <img class="swiper-image" :src="item.imgUrl" alt="">
+                </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
-        </swiper>
+            </swiper>
         </div>
     </div>
 </template>
