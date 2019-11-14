@@ -43,7 +43,7 @@ export default {
       res = res.data
       if (res.data && res.ret) {
         const data = res.data
-        this.city = data.city
+        this.city = res.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList
