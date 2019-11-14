@@ -5,9 +5,9 @@
 </template>
 
 <script>
-    export default {
-        name: 'CitySearch'
-    }
+export default {
+  name: 'CitySearch'
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -24,5 +24,5 @@
        width: 100%
        text-align: center
        border-radius: .06rem
-       color: #666     
+       color: #666
 </style>
