@@ -20,7 +20,7 @@ export default {
   props: {
     cities: Object
   },
-  data() {
+  data () {
     return {
       touchStatus: false,
       startY: 0,
@@ -31,8 +31,8 @@ export default {
     this.startY = this.$refs['A'][0].offsetTop
   },
   computed: {
-    letters() {
-      const letters = [];
+    letters () {
+      const letters = []
       for (let i in this.cities) {
         letters.push(i)
       }
@@ -53,8 +53,8 @@ export default {
         }
         this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79
-          const index = Math.floor((touchY - this.startY)/20)
-          if (index >= 0 && index < this.letters.length){
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
         }, 16)
@@ -62,7 +62,7 @@ export default {
     },
     handleTouchEnd () {
       this.touchStatus = false
-    },
+    }
   }
 }
 </script>

@@ -21,9 +21,9 @@
                     </div>
                 </div>
             </div>
-            <div 
-                class="area" 
-                v-for="(item,key) of cities" 
+            <div
+                class="area"
+                v-for="(item,key) of cities"
                 :key="key"
                 :ref="key"
             >
@@ -50,10 +50,10 @@ export default {
   },
   watch: {
     letter () {
-        if (this.letter) {
-            const element = this.$refs[this.letter][0]
-            this.scroll.scrollToElement(element)
-        }
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
     }
   }
 }
