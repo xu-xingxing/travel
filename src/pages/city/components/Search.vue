@@ -14,7 +14,12 @@
         v-show="keyword"
     >
         <ul>
-            <li class="search-item border-bottom" v-for="item in list" :key="item.id">{{item.name}}</li>
+            <li 
+              class="search-item border-bottom"
+              v-for="item in list"
+              :key="item.id"
+              @click="handleCityClick(item.name)"
+            >{{item.name}}</li>
             <li v-show="hasNoData" class="search-item border-bottom">没有找到匹配数据</li>
         </ul>
     </div>
@@ -64,6 +69,12 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.search)
+  },
+  methods: {
+     handleCityClick (city) {
+      this.$store.dispatch('changeCity_a', city)
+      this.$router.push('/')
+    }
   }
 }
 </script>
