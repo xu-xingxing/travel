@@ -24,10 +24,9 @@ export default {
     }
   },
   methods: {
-    handleScroll(){
-      console.log('scroll')
+    handleScroll () {
       const top = document.documentElement.scrollTop
-      if(top > 60) {
+      if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = {
@@ -35,7 +34,7 @@ export default {
         }
         this.showabs = false
       } else {
-          this.showabs = true
+        this.showabs = true
       }
     }
   },
@@ -47,7 +46,6 @@ export default {
   }
 }
 </script>
-
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header-abs
@@ -64,6 +62,7 @@ export default {
       color: #fff
       font-size: .6rem
   .header-fixed
+    z-index: 2
     position: fixed
     top: 0;
     left: 0;
