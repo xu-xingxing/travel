@@ -12,15 +12,19 @@
         </div>
       </div>
     </div>
-    <common-gallary @close="hanleCloseGallay" :imgs="gallaryImgs" v-show="showGallay"></common-gallary>
+    <fade-animation>
+      <common-gallary @close="hanleCloseGallay" :imgs="gallaryImgs" v-show="showGallay"></common-gallary>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   props: ['bannerImg', 'gallaryImgs', 'sightName'],
   data () {
