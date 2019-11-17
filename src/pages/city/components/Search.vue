@@ -2,10 +2,10 @@
   <div>
     <div class="search">
         <input
-            class="search-input"
-            type="text"
-            placeholder="请输入城市名或拼音"
-            v-model="keyword"
+          class="search-input"
+          type="text"
+          placeholder="请输入城市名或拼音"
+          v-model="keyword"
         >
     </div>
     <div
@@ -14,7 +14,7 @@
         v-show="keyword"
     >
         <ul>
-            <li 
+            <li
               class="search-item border-bottom"
               v-for="item in list"
               :key="item.id"
@@ -71,7 +71,7 @@ export default {
     this.scroll = new Bscroll(this.$refs.search)
   },
   methods: {
-     handleCityClick (city) {
+    handleCityClick (city) {
       this.$store.dispatch('changeCity_a', city)
       this.$router.push('/')
     }

@@ -7,8 +7,8 @@ let defaultcity = '上海'
 try {
   if (localStorage.city) {
     defaultcity = localStorage.city
-  } 
-} catch(e) {}
+  }
+} catch (e) {}
 
 export default new Vuex.Store({
   state: {
